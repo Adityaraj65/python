@@ -1,0 +1,9 @@
+def is_anagram(str1, str2):
+    return sorted(str1.lower()) == sorted(str2.lower())
+
+word1 = input("Enter the first word: ")
+word2 = input("Enter the second word: ")
+if is_anagram(word1, word2):
+    print("Anagrams")
+else:
+    print("Not anagrams")
