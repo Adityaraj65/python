@@ -1,0 +1,5 @@
+numbers = [5, 10, 2, 8, 3]
+smallest = min(numbers)
+largest = max(numbers)
+print("Smallest number:", smallest)
+print("Largest number:", largest)
