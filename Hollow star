@@ -1,0 +1,12 @@
+n = 5
+
+# printing hollow square star pattern
+for i in range(n):
+   for j in range(n):
+      # print the stars
+      if i == 0 or i == n-1 or j == 0 or j == n-1:
+         print("*", end=" ")
+      # printing the spaces
+      else:
+         print(" ", end=" ")
+   print("\r")
