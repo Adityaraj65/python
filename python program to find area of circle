@@ -1,0 +1,8 @@
+# store input
+r = float(input('Enter the radius of the circle: '))
+
+# calculate area of circle
+area = 3.14 * r * r
+
+# display result
+print('Area of circle = %.2f ' %area)
