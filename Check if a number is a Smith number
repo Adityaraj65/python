@@ -1,0 +1,26 @@
+def digit_sum(num):
+    return sum(int(digit) for digit in str(num))
+
+def prime_factors(num):
+    factors = []
+    i = 2
+    while i * i <= num:
+        if num % i:
+            i += 1
+        else:
+            num //= i
+            factors.append(i)
+    if num > 1:
+        factors.append(num)
+    return factors
+
+def is_smith_number(num):
+    digit_sum_orig = digit_sum(num)
+    factors_sum = sum(digit_sum(factor) for factor in prime_factors(num))
+    return digit_sum_orig == factors_sum
+
+num = int(input("Enter a number: "))
+if is_smith_number(num):
+    print(num, "is a Smith number")
+else:
+    print(num, "is not a Smith number")
