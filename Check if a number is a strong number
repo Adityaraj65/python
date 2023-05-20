@@ -1,0 +1,17 @@
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+def is_strong_number(num):
+    sum = 0
+    for digit in str(num):
+        sum += factorial(int(digit))
+    return sum == num
+
+num = int(input("Enter a number: "))
+if is_strong_number(num):
+    print(num, "is a strong number")
+else:
+    print(num, "is not a strong number")
